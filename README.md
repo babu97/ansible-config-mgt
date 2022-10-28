@@ -6,3 +6,4 @@ what about now ?
 
 na sai ? 
 is it pushing now ? 
+haipush joh
