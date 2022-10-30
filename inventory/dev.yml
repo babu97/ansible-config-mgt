@@ -8,7 +8,7 @@
 
 
 [db]
-172.31.88.140 ansible_ssh_user='ec2-user' 
+34.205.143.179 ansible_ssh_user='ec2-user' 
 
 [lb]
 54.237.130.69 ansible_ssh_user='ubuntu'
