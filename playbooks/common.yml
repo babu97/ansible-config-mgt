@@ -31,16 +31,15 @@
       tasks:
 
        - name: create a directory file
-          path: /home/
-          state: directory 
+          file:
+           path: /home/sample
+           state: directory 
 
        - name: create a file
-         file:
+          file:
            path: /home/ansible.txt
            state: touch
 
        - name: set timezone
          timezone:
            name:Africa/Nairobi
-          
-         
