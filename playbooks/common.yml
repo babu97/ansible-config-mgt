@@ -26,12 +26,11 @@
         state: latest
 
     - name: create directory,file and set timezone on all servers
-      hosts: webservers,nfs,db,lb
       become: yes
       tasks:
 
        - name: create a directory file
-          file:
+         
            path: /home/sample
            state: directory 
 
@@ -40,6 +39,6 @@
            path: /home/ansible.txt
            state: touch
 
-       - name: set timezone
-         timezone:
-           name:Africa/Nairobi
+        - name: set timezone
+          timezone:
+           name: Africa/Nairobi
