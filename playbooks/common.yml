@@ -30,12 +30,12 @@
       tasks:
 
        - name: create a directory file
-         
+          file:
            path: /home/sample
            state: directory 
 
        - name: create a file
-          file:
+         file:
            path: /home/ansible.txt
            state: touch
 
