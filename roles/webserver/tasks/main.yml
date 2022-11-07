@@ -1,4 +1,3 @@
-
 ---
 - name: install apache
   become: true
@@ -15,13 +14,13 @@
 - name: clone a repo
   become: true
   ansible.builtin.git:
-    repo: https://github.com/babu97/ansible.git
+    repo: https:/babu97/github.com//tooling.git
     dest: /var/www/html
     force: yes
 
 - name: copy html content to one level up
   become: true
-  command: cp -r /var/www/html/ /var/www/
+  command: cp -r /var/www/html/html/ /var/www/
 
 - name: Start service httpd, if not started
   become: true
@@ -29,8 +28,9 @@
     name: httpd
     state: started
 
-- name: recursively remove /var/www/html/ directory
+- name: recursively remove /var/www/html/html/ directory
   become: true
   ansible.builtin.file:
-    path: /var/www/html/
+    path: /var/www/html/html
     state: absent
+PREV
