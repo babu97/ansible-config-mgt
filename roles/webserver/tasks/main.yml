@@ -9,7 +9,7 @@ name: Install Apache and Git
 - name: Clone tooling app repo
   become: yes
   git:
-    repo: "github.com/babu97/tooling.git"
+    repo: "github.com//tooling.git"
     dest: ~/app
     version: "HEAD"
 
