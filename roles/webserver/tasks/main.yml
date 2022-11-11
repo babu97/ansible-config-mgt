@@ -9,10 +9,10 @@
 
 - name: Clone tooling app repo
   become: yes
-  git:
+  ansible.builtin.git:
     repo: "github.com/babu97/tooling.git"
     dest: ~/app
-    version: "HEAD"
+    force: yes
 
 - name: Copy app to /var/www/html
   become: yes
@@ -25,6 +25,6 @@
 
 - name: Make sure httpd service is running
   become: yes
-  service:
+  ansible.builtin.service:
     name: httpd
     state: started
