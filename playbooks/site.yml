@@ -12,10 +12,7 @@
 - import_playbook: ../static-assignments/uat-webservers.yml
 
 
-- name: import common file
-import playbook: ../static-assignments/common.yml
-tags: 
-   - always
+
 - name: include env-vars file
   import_playbook: ../dynamic-assignments/env-vars.yml
   tags:
