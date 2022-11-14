@@ -1,5 +1,6 @@
 ---
 - name: Enable nginx repo.
+  become: yes 
   template:
     src: nginx.repo.j2
     dest: /etc/yum.repos.d/nginx.repo
