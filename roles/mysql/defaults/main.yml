@@ -114,11 +114,11 @@ mysql_databases:
 
 # Users.
 mysql_users: 
-  - name: webaccess
+  - name: 'webaccess'
     host: 0.0.0.0
     password: secret
-    priv: *.*:all,GRANT'
-    
+    priv: '*.*:all,GRANT'
+
 mysql_disable_log_bin: false
 
 # Replication settings (replication is only enabled if master/user have values).
