@@ -47,7 +47,7 @@ nginx_extra_conf_options: ""
 #     env VARIABLE;
 #     include /etc/nginx/main.d/*.conf;
 
-nginx_extra_http_options: ""
+nginx_extra_http_options: 
  Example extra http options, printed inside the main server http config:
     nginx_extra_http_options: |
      proxy_buffering    off;
