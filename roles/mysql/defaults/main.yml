@@ -118,7 +118,7 @@ mysql_users:
     host: 0.0.0.0
     password: secret
     priv: *.*:all,GRANT'
-`
+    
 mysql_disable_log_bin: false
 
 # Replication settings (replication is only enabled if master/user have values).
