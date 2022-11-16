@@ -16,7 +16,7 @@
   import_playbook: ../static-assignments/db.yml
 
 - name: import webservers file
-  import_playbook: ../static-assignments/uat.webservers.yml
+  import_playbook: ../static-assignments/uat-webservers.yml
 
 - name: import Loadbalancers assignment
   import_playbook: ../static-assignments/lb.yml
