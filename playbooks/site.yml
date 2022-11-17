@@ -1,23 +1,18 @@
 ---
-- name: Include dynamic variables 
-  hosts: all
+- hosts: all
 
-- name: import common file
+- name: Include dynamic variables
   import_playbook: ../static-assignments/common.yml
+  include: ../dynamic-assignments/env-vars.yml
   tags:
     - always
 
-- name: include env-vars file
-  import_playbook: ../dynamic-assignments/env-vars.yml
-  tags:
-    - always
+- name: Delete wireshark installation
+  import_playbook: ../static-assignments/common-del.yml
 
-- name: import database file
-  import_playbook: ../static-assignments/db.yml
-
-- name: import webservers file
+- name: webserver
   import_playbook: ../static-assignments/webservers.yml
 
-- name: import Loadbalancers assignment
-  import_playbook: ../static-assignments/lb.yml
+- name: Loadbalancers assignment
+  import_playbook: ../static-assignments/loadbalancers.yml
   when: load_balancer_is_required
