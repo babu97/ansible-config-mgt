@@ -2,8 +2,8 @@
  172.31.95.27 ansible_ssh_user='ec2-user' 
  172.31.95.51 ansible_ssh_user='ec2-user' 
 [lb]
-172.31.18.230 ansible_ssh_user='ec2-user'
+172.31.18.230 ansible_ssh_user='ec2-user'  ansible_ssh_private_key_file=/home/ubuntu/.ssh/ben
 [db]
-172.31.19.211 ansible_ssh_user='ec2-user' 
+172.31.19.211 ansible_ssh_user='ec2-user'  ansible_ssh_private_key_file=/home/ubuntu/.ssh/ben 
 
-ansible_ssh_private_key_file=/ubuntu/home/.ssh/ben.pem
+
