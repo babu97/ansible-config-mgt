@@ -1,7 +1,6 @@
 ---
-  hosts: all
 - name: Include dynamic variables 
-  
+  hosts: all
 
 - name: import common file
   import_playbook: ../static-assignments/common.yml
@@ -21,4 +20,4 @@
 
 - name: import Loadbalancers assignment
   import_playbook: ../static-assignments/lb.yml
-  when: load_balancer_is_required 
+  when: load_balancer_is_required
